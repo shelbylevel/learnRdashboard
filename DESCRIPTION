@@ -1,0 +1,28 @@
+Package: learnRdashboard
+Title: Hockey R Learning Hub Shiny App
+Version: 0.0.1
+Authors@R: person("Shelby", "Level", email = "shelby@example.com", role = c("aut", "cre"))
+Description: A modular Shiny dashboard pairing a curated R-for-sport-analytics
+    learning roadmap with pre-loaded ice hockey datasets from the 'ISAR'
+    package, so exercises can be practiced on real hockey data as you work
+    through each phase. Built as an app-package following the 'leprechaun'
+    scaffold: modules live in R/mod_*.R, the roadmap and dataset catalogue
+    ship as real package data in data/ (built from data-raw/), and the app
+    is launched with learnRdashboard::run().
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 2.10)
+Imports:
+    bsicons,
+    bslib,
+    dplyr,
+    DT,
+    ggplot2,
+    shiny
+Suggests:
+    ISAR,
+    usethis
+LazyData: true
+Config/roxygen2/version: 8.0.0
