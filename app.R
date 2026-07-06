@@ -9,6 +9,12 @@
 # Keep this file minimal — all real app logic lives in the learnRdashboard
 # package (R/ui.R, R/server.R, R/mod_*.R, etc.), not here.
 
+# Prevent Shiny's runApp() from also trying to source R/ as loose
+# "supporting files" (it would otherwise warn and re-source package code
+# outside the package's own loading mechanism — see ?shiny::loadSupport).
+# All real app code loads properly via library(learnRdashboard) below.
+options(shiny.autoload.r = FALSE)
+
 library(learnRdashboard)
 
 run()
