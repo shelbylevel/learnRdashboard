@@ -20,9 +20,9 @@ Imports:
     dplyr,
     DT,
     ggplot2,
+    ISAR,
     shiny
 Suggests:
-    ISAR,
     usethis
 LazyData: true
 Config/roxygen2/version: 8.0.0

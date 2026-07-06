@@ -1,0 +1,7 @@
+data-raw/
+README.md
+*.Rproj
+.Rproj.user/
+man/
+inst/run/
+.rscignore

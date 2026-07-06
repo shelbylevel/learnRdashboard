@@ -10,6 +10,14 @@ A modular Shiny dashboard pairing a curated R-for-sport-analytics
 learning roadmap with pre-loaded ice hockey datasets from the
 \pkg{ISAR} package. Launch it with \code{\link[=run]{run()}}.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/shelbylevel/learnRdashboard}
+  \item Report bugs at \url{https://github.com/shelbylevel/learnRdashboard/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Shelby Level \email{shelby@example.com}
 
