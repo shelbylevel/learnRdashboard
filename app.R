@@ -15,6 +15,6 @@
 # All real app code loads properly via library(learnRdashboard) below.
 options(shiny.autoload.r = FALSE)
 
-library(learnRdashboard)
+devtools::load_all()
 
-run()
+learnRdashboard::run()
