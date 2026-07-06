@@ -65,13 +65,21 @@ progress_server <- function(id) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
+  saved <- read_progress_store()
+
   progress <- reactiveVal(
-    setNames(rep("not_started", nrow(all_books)), all_books$title)
+    saved$progress %||%
+      setNames(rep("not_started", nrow(all_books)), all_books$title)
   )
 
   notes <- reactiveVal(
-    setNames(rep("", nrow(all_books)), all_books$title)
+    saved$notes %||%
+      setNames(rep("", nrow(all_books)), all_books$title)
   )
+
+  observe({
+    write_progress_store(progress(), notes())
+  })
 
   output$reading_list_ui <- renderUI({
     prog <- progress()
