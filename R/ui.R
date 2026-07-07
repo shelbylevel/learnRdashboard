@@ -11,37 +11,12 @@
 ui <- function(request) {
   page_navbar(
     title = tags$span(
-      bs_icon("person-arms-up"),
-      " ",
+      icon("hockey-puck"),
       tags$strong("Hockey R Learning Hub")
     ),
-    theme = bs_theme(
-      version = 5,
-      bootswatch = "flatly",
-      primary = "#1a6fa8",
-      success = "#1D9E75",
-      font_scale = 0.95
-    ),
-    bg = "#1a6fa8",
+    theme = slbrand::theme_sl(),
+    # bg = "#1a6fa8",
     window_title = "Hockey R Learning Hub",
-    header = tags$style(HTML(
-      "
-      .navbar-nav .nav-link,
-      .navbar-nav .nav-link.active,
-      .navbar-nav .nav-link:focus,
-      .navbar-nav .nav-link:hover,
-      .navbar-nav .show > .nav-link {
-        color: #ffffff !important;
-      }
-      .navbar-nav .nav-link.active {
-        font-weight: 700;
-        opacity: 1;
-      }
-      .navbar-nav .nav-link:not(.active) {
-        opacity: 0.8;
-      }
-    "
-    )),
 
     explorerUI("explorer"),
     learning_planUI("plan"),
