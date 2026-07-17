@@ -15,7 +15,7 @@ ui <- function(request) {
       tags$strong("Hockey R Learning Hub")
     ),
     theme = slbrand::theme_sl(),
-    # bg = "#1a6fa8",
+    # bg = brand_colors("palette")[["faded-jade-10"]],
     window_title = "Hockey R Learning Hub",
 
     explorerUI("explorer"),
@@ -32,6 +32,8 @@ ui <- function(request) {
         bs_icon("box-arrow-up-right"),
         " Big Book of R"
       )
-    )
+    ),
+    slbrand::logo_nav_item(),
+    header = slbrand::logo_header()
   )
 }
